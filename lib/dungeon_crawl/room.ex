@@ -14,8 +14,28 @@ defmodule DungeonCrawl.Room do
     },
     %Room{
       description: "You can see an enemy blocking your path.",
+      actions: [forward(), search()],
+      trigger: Triggers.Treasure
+    },
+    %Room{
+      description: "You can see an enemy blocking your path.",
+      actions: [forward(), search()],
+      trigger: Triggers.Trap
+    },
+    %Room{
+      description: "You can see an enemy blocking your path.",
+      actions: [forward(), rest()],
+      trigger: Triggers.Rest
+    },
+    %Room{
+      description: "You can see an enemy blocking your path.",
       actions: [forward()],
       trigger: Triggers.Enemy
+    },
+    %Room{
+      description: "You can see an enemy blocking your path.",
+      actions: [forward(), rest()],
+      trigger: Triggers.EnemyHidden
     }
   ]
 end
